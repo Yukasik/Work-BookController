@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Book;
+use App\Models\Car;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -42,6 +43,24 @@ class DatabaseSeeder extends Seeder
         'description' => 'Мистический роман, в котором Сатана со своей свитой посещает Москву 1930-х годов, переплетая библейские сюжеты и историю трагической любви.',
         'year' => '1967',
         'author' => 'Михаил Булгаков'
+    ]);
+
+    Car::create([
+        'model' => 'машина1',
+        'color' => 'серая',
+        'number' => '323',
+    ]);
+
+    Car::create([
+        'model' => 'машина2',
+        'color' => 'черная',
+        'number' => '111',
+    ]);
+
+    Car::create([
+        'model' => 'машина3',
+        'color' => 'красная',
+        'number' => '222',
     ]);
     }
 }

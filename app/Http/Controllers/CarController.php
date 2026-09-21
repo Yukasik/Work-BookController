@@ -2,26 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
+use App\Models\Car;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class BookController extends Controller
+class CarController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $books = Book::all();
-        return view('dashboard', compact('books'));
+        $cars = Car::all();
+        return view('cars.index', compact('cars'));
     }
 
-    public function myBook()
-    {
-        $books = Book::where('user_id', Auth::id())->get();
-        return view('books.index', compact('books'));
-    }
+    // public function myCar()
+    // {
+    //     $cars = Car::where('user_id', Auth::id())->get();
+    //     return view('cars.index', compact('cars'));
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -42,7 +42,7 @@ class BookController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Book $book)
+    public function show(Car $car)
     {
         //
     }
@@ -50,7 +50,7 @@ class BookController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Book $book)
+    public function edit(Car $car)
     {
         //
     }
@@ -58,7 +58,7 @@ class BookController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Book $book)
+    public function update(Request $request, Car $car)
     {
         //
     }
@@ -66,7 +66,7 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Book $book)
+    public function destroy(Car $car)
     {
         //
     }

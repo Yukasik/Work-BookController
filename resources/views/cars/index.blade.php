@@ -9,18 +9,13 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <a href="{{ route('books.index') }}">Мои книги</a>
-
-                    @foreach ($books as $book)
+                    @foreach ($cars as $car)
                         <div class="mt-4 p-4 bg-white shadow">
-                            <p>{{ $book->name }}</p>
-                            <p>{{ $book->author }}, {{ $book->year }}</p>
-                            <p>{{ $book->description }}</p>
+                            <p>{{ $car->model }}</p>
+                            <p>{{ $car->color }}</p>
+                            <p>{{ $car->number }}</p>
                         </div>
                     @endforeach
-
-
-                    <a href="{{ route('cars.index') }}">Мои машины</a>
                 </div>
             </div>
         </div>
